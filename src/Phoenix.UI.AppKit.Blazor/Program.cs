@@ -1,3 +1,4 @@
+using MudBlazor.Services;
 using Phoenix.UI.AppKit.Blazor.Components;
 
 namespace Phoenix.UI.AppKit.Blazor
@@ -11,6 +12,8 @@ namespace Phoenix.UI.AppKit.Blazor
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
+
+            builder.Services.AddMudServices();
 
             var app = builder.Build();
 
