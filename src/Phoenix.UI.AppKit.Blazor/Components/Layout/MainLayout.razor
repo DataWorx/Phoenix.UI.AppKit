@@ -7,13 +7,16 @@
 
 <MudLayout>
 
-    <MudAppBar Elevation="3" Color="Color.Transparent">
+    <MudAppBar Elevation="0" Color="Color.Transparent">
         <MudIconButton Icon="@GetIcon()" Class="@(ThemeCss.PrimaryForeground)" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        <MudText Typo="Typo.h5" Class="@ThemeCss.AddClasses("ml-2", ThemeCss.PrimaryForeground)">Phoenix</MudText>
+
         <MudSpacer />
         <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Class="@ThemeCss.PrimaryForeground" Edge="Edge.End" />
     </MudAppBar>
-    <MudDrawer @bind-Open="drawerOpen" ClipMode="DrawerClipMode.Always">
+    <MudDrawer @bind-Open="drawerOpen">
+        <MudDrawerHeader LinkToIndex="true">
+            <MudText Typo="Typo.h5" Class="@ThemeCss.AddClasses("ml-2", ThemeCss.PrimaryForeground)">Phoenix</MudText>
+        </MudDrawerHeader>
         <NavMenu />
     </MudDrawer>
     <MudMainContent>
